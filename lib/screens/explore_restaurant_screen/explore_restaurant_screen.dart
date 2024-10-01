@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:my_food_app/core/app_export.dart';
 import 'package:my_food_app/widgets/app_bar/appbar_trailing_image.dart';
 import 'package:my_food_app/widgets/custom_button_bar.dart';
-import 'package:my_food_app/widgets/custom_icon_button.dart';
 import 'package:my_food_app/widgets/custom_search_view.dart';
 
 import 'bloc/explore_restaurant_bloc.dart';
@@ -41,7 +40,8 @@ class ExploreRestaurantScreen extends StatelessWidget {
               buildStackIconOne(context),
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 14.h),
+                  // color: Colors.amber,
+                  padding: EdgeInsets.symmetric(horizontal: 0.h),
                   child: Stack(
                     alignment: Alignment.bottomCenter,
                     children: [
@@ -99,18 +99,18 @@ class ExploreRestaurantScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: Container(
-          width: double.infinity,
-          margin: EdgeInsets.symmetric(horizontal: 10.h),
-          child: buildBottomBar(context),
-        ),
+        // bottomNavigationBar: Container(
+        //   width: double.infinity,
+        //   margin: EdgeInsets.symmetric(horizontal: 10.h),
+        //   child: buildBottomBar(context),
+        // ),
       ),
     );
   }
 
   Widget buildStackIconOne(BuildContext context) {
     return Container(
-      height: 325.h,
+      height: 240.h,
       width: double.infinity,
       margin: EdgeInsets.only(left: 24.h),
       child: Stack(
@@ -143,18 +143,6 @@ class ExploreRestaurantScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-            ),
-          ),
-          Positioned(
-            right: 20.h,
-            bottom: 38.h,
-            child: CustomIconButton(
-              height: 50.h,
-              width: 48.h,
-              padding: EdgeInsets.all(12.h),
-              child: CustomImageView(
-                imagePath: ImageConstant.imgCloseDeepOrange70050x48,
               ),
             ),
           ),
@@ -198,6 +186,7 @@ class ExploreRestaurantScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: CustomSearchBar(
+                              borderRadius: 10,
                               margin: EdgeInsets.only(left: 5),
                               contentPadding:
                                   EdgeInsets.fromLTRB(18.h, 12.h, 12.h, 12.h),
@@ -264,7 +253,7 @@ class ExploreRestaurantScreen extends StatelessWidget {
         return GridView.builder(
           shrinkWrap: true,
           physics: const BouncingScrollPhysics(),
-          padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 20.h),
+          padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 10.h),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: 20.0,

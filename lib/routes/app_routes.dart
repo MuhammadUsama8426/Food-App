@@ -3,7 +3,6 @@ import 'package:my_food_app/screens/explore_restaurant_screen/explore_restaurant
 import 'package:my_food_app/screens/onboarding1_screen/onboarding1_screen.dart';
 import 'package:my_food_app/screens/onboarding2_screen/onboarding2_screen.dart';
 import 'package:my_food_app/screens/onboarding_screen/onboarding_screen.dart';
-import 'package:my_food_app/screens/set_location_screen/set_location_screen.dart';
 import 'package:my_food_app/screens/sign_in_screen/sign_in_screen.dart';
 import 'package:my_food_app/screens/sign_up_screeen/sign_up_screen.dart';
 import 'package:my_food_app/screens/upload_photo_screen/upload_photo_screen.dart';
@@ -73,7 +72,7 @@ class AppRoutes {
         uploadPhotoScreen: UploadPhotoScreen.builder,
         // uploadPreviewScreen: UploadPreviewScreen.builder, ye bad m thk karonga
         // SetLocationScreen.routeName: (context) =>
-        setLocationScreen: SetLocationScreen.builder,
+        // setLocationScreen: SetLocationScreen.builder,
         // SignupSuccessNotificationScreen.routeName: (context) =>
         //     SignupSuccessNotificationScreen.builder(),
         // VerificationCodeScreen.routeName: (context) =>
@@ -110,6 +109,6 @@ class AppRoutes {
         // SetLocation1Screen.routeName: (context) => SetLocation1Screen.builder(),
         // AppNavigationScreen.routeName: (context) =>
         //     AppNavigationScreen.builder(),
-        initialRoute: SetLocationScreen.builder,
+        initialRoute: ExploreRestaurantScreen.builder,
       };
 }
